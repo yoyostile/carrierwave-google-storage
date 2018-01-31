@@ -43,7 +43,7 @@ module CarrierWave
       end
 
       def delete
-        deleted = file? ? file.delete : true
+        deleted = file ? file.delete : true
         self.file_exists = false if deleted
         deleted
       end
